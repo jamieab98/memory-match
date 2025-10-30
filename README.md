@@ -1,16 +1,28 @@
-# React + Vite
+🧠 Project: Memory Match — A Card Flipping Puzzle Game
+🎮 Concept
+Create a grid of face-down cards. Each turn, the player flips two cards. If they match, they stay revealed. If not, they flip back. The goal is to match all pairs in the fewest moves possible.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🔧 Core Features
 
-Currently, two official plugins are available:
+- Card Grid: Render a grid of cards with hidden values (e.g., emojis, numbers, icons).
+- Flip Logic: Clicking a card reveals its value. Track flipped cards using useState.
+- Match Check: After two cards are flipped, check for a match. If matched, keep them revealed.
+- Move Counter: Track how many turns the player has taken.
+- Win Condition: Show a “You win!” message when all pairs are matched.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧩 useState Challenges
 
-## React Compiler
+- Manage multiple state variables:
+- cards: array of card objects with value and flipped status
+- flipped: array of currently flipped cards
+- moves: number of turns taken
+- matched: array of matched card indices or IDs
+- Use setTimeout to delay flipping cards back if they don’t match
+- Disable clicks while two cards are being compared
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+💡 Bonus Ideas
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Add a timer to track how fast the player finishes
+- Let users choose difficulty (easy: 4 pairs, hard: 12 pairs)
+- Add a “best score” tracker using localStorage
+- Make it multiplayer: alternate turns and track each player’s score
