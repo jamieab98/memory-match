@@ -1,8 +1,9 @@
+import { cardContent } from "./cardContent";
 
 function App() {
 
   return(
-    <div>The App Component</div>
+    <div>{cardContent}</div>
   );
 }
 

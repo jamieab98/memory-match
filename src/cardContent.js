@@ -1,0 +1,1 @@
+export const cardContent = ["Apple", "Banana", "Orange", "Car", "Caluclator", "Water Bottle", "Frisbee"]
