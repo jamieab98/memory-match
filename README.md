@@ -26,3 +26,15 @@ Create a grid of face-down cards. Each turn, the player flips two cards. If they
 - Let users choose difficulty (easy: 4 pairs, hard: 12 pairs)
 - Add a “best score” tracker using localStorage
 - Make it multiplayer: alternate turns and track each player’s score
+
+Road Map:
+create the cards with unique images/emojis
+-create the cards with number/text first and then figure out how to use images instead
+format the cards into a 4x4 grid
+make it so each card can be flipped after being clicked
+make it so when two cards are flipped, they flip back over
+-maybe create a state where the value is equal to the number of cards flipped. once the number reaches 3, it resets to 0 and all cards are flipped back to their default position
+-similar as above but once two cards have been flipped, a timer starts (2 seconds?) and after that timer is up, the revealed cards get flipped back
+make it so when two matching cards are revealed, they they remain revealed
+-when two matching cards are revealed, it changes their className to make them unflippable and unclickable. then reset the state back to 0
+when all cards are matched (or no cards or in their default position), show that the game is over
