@@ -1,9 +1,14 @@
-import { cardContent } from "./cardContent";
+import { cardContent, shuffle } from "./cardContent";
 
 function App() {
+  const cards = shuffle(cardContent);
 
   return(
-    <div>{cardContent}</div>
+    <div>
+      <div>
+        {cards}
+      </div>
+    </div>
   );
 }
 
